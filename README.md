@@ -2,8 +2,8 @@
 A Problematic Language to play around.
 
 ## Why create this?
-±×³É Àç¹ÌÀÖÀ» °Å °°±âµµ ÇÏ°í, ÇÑ¹ø ÀÌ·± Æ¯Â¡À» Áö´Ñ ¾ğ¾î¸¦ ÅëÇØ
-¾î¶² Àç¹ÌÀÖ´Â ÀÏÀ» ÇÒ ¼ö ÀÖÀ»Áö ±Ã±İÇÏ±âµµ ÇØ¼­ ¸¸µé¾ú´Ù.
+ê·¸ëƒ¥ ì¬ë¯¸ìˆì„ ê±° ê°™ê¸°ë„ í•˜ê³ , í•œë²ˆ ì´ëŸ° íŠ¹ì§•ì„ ì§€ë‹Œ ì–¸ì–´ë¥¼ í†µí•´
+ì–´ë–¤ ì¬ë¯¸ìˆëŠ” ì¼ì„ í•  ìˆ˜ ìˆì„ì§€ ê¶ê¸ˆí•˜ê¸°ë„ í•´ì„œ ë§Œë“¤ì—ˆë‹¤.
 
 ## Features
 - TBD xD
@@ -11,5 +11,5 @@ A Problematic Language to play around.
 ## Syntax
 Nothing is decided yet.
 
-## Current draft (notion)
+## Current draft
 You can see my thoughts and drafts on [this notion](https://hotmandu.notion.site/Problang-26471bfb52af44eb97ac4320f9b07a0b)
