@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="problang\Lexer.fs" />
+    <Compile Include="problang\Parser.fs" />
+    <Compile Include="problang\Machine.fs" />
+    <Compile Include="problang\Problang.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
