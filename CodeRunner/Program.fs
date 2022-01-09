@@ -26,12 +26,32 @@ let REP () =
         elif str = "@@quit" then
             qflag <- true
             flag <- false
+        else if code = "" then
+            code <- str
         else
-            code <- code + str
+            code <- $"{code}\n{str}"
+
+    code <- $"{code}\n"
 
     if qflag = true then
         false
     else
+        printfn "[Code]"
+        printfn "%s" code
+
+        let lexr = Lexer.Lex code
+        printfn "[Lexer]"
+
+        lexr
+        |> Seq.windowed 2
+        |> Seq.takeWhile
+            (fun x ->
+                x.[0] <> Lexer.Token.EOF
+                || x.[1] <> Lexer.Token.EOF)
+        |> Seq.iter (fun x -> printfn "%A" x.[0])
+        printfn ""
+
+        printfn "[Machine]"
         mach.Load(code)
         flag <- true
 
@@ -50,13 +70,15 @@ let REP () =
             | ConsoleKey.Q ->
                 flag <- false
                 Ok "Escape"
-            | _ ->
-                Error $"Invalid key: {controls.Key}"
+            | ConsoleKey.H -> Error "->: Step   Q: Quit simulation   H: Help"
+            | _ -> Error $"Invalid key: {controls.Key}   | Press H to see help"
 
-        let resultToBool rt = 
+        let resultToBool rt =
             match rt with
-            | Ok(str) -> printfn "%s" str; false
-            | Error(str) -> 
+            | Ok (str) ->
+                printfn "%s" str
+                false
+            | Error (str) ->
                 printf "%s" str
                 Console.SetCursorPosition(0, Console.CursorTop)
                 true
